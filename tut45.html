@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid = Media Queries</title>
+</head>
+<style>
+    .rossy {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas:
+            'navbar navbar navbar navbar'
+            'section section section aside'
+            'footer footer footer footer';
+    }
+
+    @media only screen and (max-width:300px) {
+        body {
+
+            background-color: cyan;
+        }
+        .rossy {
+        grid-template-areas:
+            'navbar navbar navbar navbar'
+            'section section section section'
+            'aside aside aside aside'
+            'footer footer footer footer';
+    }
+        span{
+            display: block;
+            text-align: center;
+        }
+        aside{
+            display: none;
+        }
+    }
+
+    @media (min-width:300px) and (max-width:500px) {
+        body {
+            background-color: blueviolet;
+        }
+        .rossy {
+        grid-template-areas:
+            'navbar navbar navbar navbar'
+            'section section section section'
+            'aside aside aside aside'
+            'footer footer footer footer';
+    }
+    aside{
+        display: none;
+    }
+    span{
+            display: block;
+            text-align: center;
+        }
+    }
+    @media (min-width:500px) and (max-width:800px) {
+        body {
+            background-color: yellow;
+        }
+        .rossy {
+
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section section'
+                'aside aside aside aside'
+                'footer footer footer footer';
+        }
+        span{
+            display: block;
+            text-align: center;
+        }
+    }
+
+    @media (min-width:800px) {
+        body {
+            background-color: rgb(243, 27, 160);
+        }
+    }
+
+    .bdr {
+        border: 2px solid rgb(0, 0, 0);
+        padding: 12px;
+        background-color: lightgreen;
+    }
+
+    nav {
+        grid-area: navbar;
+    }
+
+    section {
+        grid-area: section;
+    }
+
+    aside {
+        grid-area: aside;
+    }
+
+    footer {
+        grid-area: footer;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="rossy">
+        <nav class="bdr">
+            <span>Home</span>
+            <span>About us</span>
+            <span>Services</span>
+            <span>Contact</span>
+        </nav>
+        <section class="bdr">
+            <h2> Learn css in hindi</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolor quisquam voluptatibus. Tempore iure veniam odit quos ullam aut quo. Placeat architecto numquam minima veritatis ab, adipisci quas possimus ea, quo eius maiores nostrum odit veniam accusamus voluptate expedita. Dolores labore provident optio eaque eos quam repellat dicta tempora eligendi, possimus totam animi exercitationem doloremque sequi nemo perspiciatis debitis voluptatum est, amet molestiae? Provident ducimus veritatis nemo labore! Animi voluptate rem nobis, aspernatur suscipit nihil adipisci officiis aliquid ducimus ipsam neque voluptatem non! Minus omnis sapiente vitae assumenda cupiditate et molestiae soluta consectetur illo, repellat similique consequuntur itaque earum quasi ipsam fugit culpa reprehenderit. Veniam neque delectus nostrum corporis nihil distinctio quis dolores? Doloribus iure atque ducimus quibusdam alias debitis, perspiciatis dignissimos.</p>
+        </section>
+        <aside class="bdr">
+            <h1> More about us</h1>
+        </aside>
+    </div>
+    <footer class="bdr"> copyright CodewithLakshii 2020</footer>
+</body>
+
+</html>

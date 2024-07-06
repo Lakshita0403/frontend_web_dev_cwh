@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables /custom Properties</title>
+    <style>
+        :root{
+            --primary-colour: violet;
+            --danger-colour: crimson;
+           --maxw: 233px;
+        }
+.box{
+    /* --box-colour: rgb(74, 4, 74); */
+    width: 200px;
+    height: 200px;
+    background-color: var(--primary-colour);
+    box-shadow:  6px 6px  var(--box-colour);
+    /* border: 2px solid var(--danger-colour); */
+    margin: 2px 9px;
+}
+.sunny{
+    max-width:var(--maxw);
+    margin: auto;
+    background-color: var(--danger-colour);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: var(--box-colour); */
+}
+
+    </style>
+</head>
+<body>
+    <div class="sunny">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+       
+
+    </div>
+    
+</body>
+</html>

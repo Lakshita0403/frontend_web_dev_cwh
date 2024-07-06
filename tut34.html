@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box shadow and text shadow</title>
+</head>
+<style>
+.shiny{
+    display: flex;
+}
+.card{
+ padding: 23px 12px;
+ /* border: 2px solid crimson; */
+margin: 23px 12px;
+background-color: aqua;
+/* box-shadow:offset-x offset-y color */
+/* box-shadow:offset-x offset-y blur-radius color */
+/* box-shadow:offset-x offset-y blur radius spread radius color */
+/* box-shadow: -10px -13px greenyellow; */
+/* box-shadow: 7px 5px 17px greenyellow; */
+/* box-shadow: 7px 5px 17px 6px rgba(57, 15, 227, 0.5); */
+box-shadow: inset 12px 14px violet;
+box-shadow: 10px 12px greenyellow, 21px 27px blue;
+}
+.card h2{
+    /* text-shadow: 3px 4px rgb(239 214 182); */
+    /* text-shadow: 3px 4px 6px rgb(2 0 139); */
+    text-shadow: -3px -4px 6px rgb(248, 15, 120);
+}
+
+</style>
+<body>
+    <div class="shiny">
+        <div class="card" id="card-1">
+            <h2>This is c++ course</h2>
+            <p> I have started c++ course which does not mean that we will stop this course. We will continue this course to completion.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsa, modi excepturi culpa dicta provident aspernatur aperiam necessitatibus. Quos, nesciunt? Atque nobis est inventore. Ut accusamus commodi perspiciatis nulla vero corporis, quisquam earum molestias.</p>
+        </div>
+        <div class="card" id="card-2">
+            <h2> This is HTML course</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsa, modi excepturi culpa dicta provident aspernatur aperiam necessitatibus. Quos, nesciunt? Atque nobis est inventore. Ut accusamus commodi perspiciatis nulla vero corporis, quisquam earum molestias.</p>
+        </div>
+        <div class="card" id="card-3">
+            <h2>Card3</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsa, modi excepturi culpa dicta provident aspernatur aperiam necessitatibus. Quos, nesciunt? Atque nobis est inventore. Ut accusamus commodi perspiciatis nulla vero corporis, quisquam earum molestias.</p>
+        </div>
+       
+
+    </div>
+    
+</body>
+</html>
